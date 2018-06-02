@@ -3,6 +3,7 @@ There is google_key.js file here.
 content of file is 
 
 module.exports.key = api_key_string
+module.exports.url = 'https://maps.googleapis.com/maps/api/geocode/json'
 
 it contains google api key which you can create https://console.developers.google.com/apis/credentials
 

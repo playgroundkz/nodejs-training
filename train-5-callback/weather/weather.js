@@ -1,6 +1,6 @@
 const request = require('request')
 
-const weather_conf = require('../weather_key')
+const weather_conf = require('../../keys/weather_key')
 
 getTemperature = (lat, lng, callback) => {
     request(

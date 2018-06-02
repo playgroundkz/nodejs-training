@@ -1,6 +1,6 @@
 const request = require('request')
 
-const google_api = require('../google_key')
+const google_api = require('../../keys/google_key')
 
 geocodeAddress = (address, callback) => {
 

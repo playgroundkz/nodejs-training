@@ -2,6 +2,8 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 
+const port = process.env.PORT || 3000
+
 var app = express()
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -14,26 +16,29 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 })
 
+app.set('views', __dirname + '/views')
+
 app.set('view engine', 'hbs')
 
 
 // log midlleware 
-app.use((req, res, next) => {
-    var log = `time=${new Date().toString()}; method=${req.method}; url=${req.url}\n`;
-    console.log(log)
-    fs.appendFile('server.log',log, (err)=>{
-            if (err){
-                throw err
-            }
-        // console.log('Couldnot write log data to server.log data')
-    })
-    next()
-})
+// app.use((req, res, next) => {
+//     var log = `time=${new Date().toString()}; method=${req.method}; url=${req.url}\n`;
+//     console.log(log)
+//     fs.appendFile('server.log',log, (err)=>{
+//             if (err){
+//                 throw err
+//             }
+//         // console.log('Couldnot write log data to server.log data')
+//     })
+//     next()
+// })
 
 // maintenance middleware
-app.use((req, res, next)=>{
-    res.render('maintenance')
-})
+// app.use((req, res, next)=>{
+//     res.render('maintenance')
+// })
+
 
 app.use(express.static(__dirname + '/public'))
 
@@ -65,4 +70,6 @@ app.get('/bad', (req, res) => {
     })
 })
 
-app.listen('3000')
+app.listen(port, () => {
+    console.log(`server is up on port ${port}`)
+})

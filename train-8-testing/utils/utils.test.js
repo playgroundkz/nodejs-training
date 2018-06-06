@@ -9,6 +9,13 @@ it('should plus two numbers', () => {
     }
 })
 
+it("it should async add two numbers", (done)=>{
+    utils.asyncAdd(3,4,(sum)=>{
+        expect(sum).toBe(7)
+        done()
+    })
+})
+
 it('should minus two numbers', () => {
     var res = utils.minus(33,11)
     expect(res).toBe(22)

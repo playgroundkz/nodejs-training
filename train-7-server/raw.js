@@ -16,4 +16,19 @@ app.get('/bad', (req, res) => {
     })
 })
 
+app.get('/not', (req, res) => {
+    res.send([ 
+        {
+            name : "Abdurakhman",
+            age : 30,
+        },
+        {
+            name : "Agatay", 
+            age : 29
+        }
+    ] )
+})
+
 app.listen('3000')
+
+module.exports.app = app

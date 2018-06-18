@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\"",
+    "test": "mocha \"./train-9-mongo/test-api/*.js\"",
     "test-watch": "nodemon --exec \"npm test\"",
     "start": "node train-7-server/hbs-middleware.js"
   },

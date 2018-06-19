@@ -1,0 +1,5 @@
+cd C:\Program Files\MongoDB\Server\3.6\bin
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongod.exe --dbpath "C:\Users\x-com.developer\mongo-data"
+
+mongod.exe --dbpath "C:\Users\x-com.developer\mongo-data"

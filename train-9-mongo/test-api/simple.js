@@ -5,7 +5,6 @@ var simple = require("./../server/simple.js")
 var {app} = require("./../server/simple-app")
 
 /*
-
 describe("Testing with a native mocha tools", () => {
     
     it ("Should plus two numbers", ()=>{
@@ -27,7 +26,8 @@ describe("Testing with a native mocha tools", () => {
         simple.addAsync(3, 9, callback)
     })
 })
-
+*/
+/*
 describe("Testing with assertions", () => {
     it("Should minus two numbers", () => {        
         var v1 = 9, v2 = 3
@@ -45,7 +45,6 @@ describe("Testing with assertions", () => {
         })
     })
 })
-
 */
 
 describe("Testing http requests", () => {
@@ -68,8 +67,6 @@ describe("Testing http requests", () => {
     request(app)
     .get('/hello')
     .expect("hello")
-    })
     .end(done)
+    })
 })
-
-}) 
